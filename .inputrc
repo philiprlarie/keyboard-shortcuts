@@ -1,0 +1,7 @@
+"\eh": backward-kill-word
+"\ew": copy-region-as-kill
+"\C-w": kill-region
+"\C-p": history-search-backward
+"\C-n": history-search-forward
+
+set completion-ignore-case On

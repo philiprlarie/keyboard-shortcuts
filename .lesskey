@@ -1,0 +1,24 @@
+# https://linux.die.net/man/1/lesskey
+# 7/22/17
+
+# command
+^S			repeat-search
+^R			reverse-search
+p			back-line
+n			forw-line
+
+#line-edit
+\eh			word-backspace
+\ef			word-right
+\eb			word-left
+^B			left
+^F			right
+^A			home
+^E			end
+^D			delete
+\ed			word-delete
+^p			up
+^n			down
+
+#env
+LESS = -z10 -RiM
