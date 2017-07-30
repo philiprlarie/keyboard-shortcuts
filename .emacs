@@ -6,6 +6,8 @@
       scroll-conservatively 10000)
 
 (setq kill-ring-max 4)
+(add-hook 'java-mode-hook
+          (lambda () (modify-syntax-entry ?_ "w"))) ;; make '_' a word character
 
 (global-set-key (kbd "C-c h") 'help-command)
 (global-set-key (kbd "M-?") 'mark-paragraph)
