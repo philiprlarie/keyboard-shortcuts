@@ -66,3 +66,7 @@
 '.github-FilePatchView, .github-StagingView':
   'enter': 'github:open-file'
   's': 'core:confirm'
+
+'.platform-darwin atom-text-editor':
+  'ctrl-s': 'find-and-replace:find-next'
+  'ctrl-r': 'find-and-replace:find-previous'
