@@ -66,7 +66,8 @@ alias hideHidden="defaults write com.apple.finder AppleShowAllFiles NO; killall 
 
 ################################################################
 # Git
-alias prune="git remote prune origin; git branch | xargs git branch -D;"
+alias prune="git checkout master; git remote prune origin; git branch | sed -Ee 's/^\*? *//g' -Ee '/^master$/d' | xargs git branch -D;"
+# alias prune="git remote prune origin; git branch | xargs git branch -D;"
 alias gitlog="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gitgraph="git log --graph --pretty=oneline --abbrev-commit;"
 alias gi='echo git |'
