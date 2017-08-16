@@ -61,8 +61,8 @@ alias hist='eval "history $((`tput lines` - 2))"'
 
 ################################################################
 # Finder
-alias showHidden="defaults write com.apple.finder AppleShowAllFiles YES; killall Finder;"
-alias hideHidden="defaults write com.apple.finder AppleShowAllFiles NO; killall Finder;"
+alias showHidden="echo use CMD-SHIFT-. in finder"
+alias hideHidden="echo use CMD-SHIFT-. in finder"
 
 ################################################################
 # Git
