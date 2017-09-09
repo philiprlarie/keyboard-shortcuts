@@ -43,7 +43,7 @@
   'ctrl-shift-tab ^ctrl': 'unset!'
   'ctrl-shift-tab': 'pane:show-previous-item'
   'alt-<': 'core:move-to-top'
-  'alt->': 'core:move-to-bottom'
+  'alt-shift-.': 'core:move-to-bottom'
   'alt-g alt-g': 'go-to-line:toggle'
   'ctrl-x r m': 'bookmarks:toggle-bookmark'
   'ctrl-x r l': 'bookmarks:view-all'
@@ -70,3 +70,4 @@
 '.platform-darwin atom-text-editor':
   'ctrl-s': 'find-and-replace:find-next'
   'ctrl-r': 'find-and-replace:find-previous'
+  'cmd-;': 'spell-check:correct-misspelling'
