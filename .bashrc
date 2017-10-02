@@ -8,6 +8,7 @@ source ~/Development/config_files/square/bashrc
 # if [[ -f "$SQUARE_HOME/config_files/square/bundler-exec.sh" ]]; then
 #   source $SQUARE_HOME/config_files/square/bundler-exec.sh
 # fi
+alias dashdoc="sq @dashboard stop && rm -rf tmp && sq @dashboard build"
 
 # load the aliases in config_files files (optional)
 source ~/Development/config_files/square/aliases
