@@ -42,6 +42,7 @@ alias ll="ls -lah"
 alias ls="ls -F"
 alias cdd="cd ~/Development"
 alias cddd="cd ~/Development/dashboard"
+alias cddj="cd ~/Development/java"
 cdf () { cd `dirname $1`; }
 set -o ignoreeof
 alias cd..="cd .."
