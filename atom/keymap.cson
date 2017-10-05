@@ -71,3 +71,4 @@
   'ctrl-s': 'find-and-replace:find-next'
   'ctrl-r': 'find-and-replace:find-previous'
   'cmd-;': 'spell-check:correct-misspelling'
+  'ctrl-alt-k': 'custom:kill-sexp'

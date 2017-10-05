@@ -55,6 +55,13 @@ atom.commands.add 'atom-text-editor', 'custom:just-one-space', ->
     editor.deleteToNextWordBoundary undo: 'skip' # TODO: and this?
   editor.insertText ' '
 
+atom.commands.add 'atom-text-editor', 'custom:kill-sexp', ->
+    editor = atom.views.getView(atom.workspace.getActiveTextEditor())
+    return unless editor
+    atom.commands.dispatch(editor, 'atomic-emacs:mark-sexp')
+    atom.commands.dispatch(editor, 'atomic-emacs:kill-region')
+
+
   # row = curPoint.row
   #
   # left = curPoint.column
