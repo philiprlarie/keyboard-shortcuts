@@ -40,6 +40,7 @@ export CLICOLOR='YES'
 export GREP_OPTIONS='--color=auto'
 alias ll="ls -lah"
 alias ls="ls -F"
+alias cddes="cd ~/Desktop"
 alias cdd="cd ~/Development"
 alias cddd="cd ~/Development/dashboard"
 alias cddj="cd ~/Development/java"
@@ -51,8 +52,8 @@ export PAGER="`which less`"
 
 ################################################################
 # History
-HISTSIZE=1000
-HISTFILESIZE=500
+HISTSIZE=10000
+HISTFILESIZE=5000
 # https://www.digitalocean.com/community/tutorials/how-to-use-bash-history-commands-and-expansions-on-a-linux-vps
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 # ^ gets history to be consistent accross different shells. before each command:
