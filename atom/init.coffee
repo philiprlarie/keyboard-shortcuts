@@ -61,6 +61,17 @@ atom.commands.add 'atom-text-editor', 'custom:kill-sexp', ->
     atom.commands.dispatch(editor, 'atomic-emacs:mark-sexp')
     atom.commands.dispatch(editor, 'atomic-emacs:kill-region')
 
+atom.commands.add 'body', 'custom:show-next-item', ->
+    editor = atom.workspace.getActiveTextEditor()
+    return unless editor
+    editor.element.focus()
+    atom.workspace.getActivePane().activateNextItem()
+
+atom.commands.add 'body', 'custom:show-previous-item', ->
+    editor = atom.workspace.getActiveTextEditor()
+    return unless editor
+    editor.element.focus()
+    atom.workspace.getActivePane().activateNextItem()
 
   # row = curPoint.row
   #
