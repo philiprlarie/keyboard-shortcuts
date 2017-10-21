@@ -42,8 +42,6 @@ atom.commands.add 'atom-text-editor', 'custom:just-one-space', ->
   editor = atom.workspace.getActiveTextEditor()
   editor.insertText ' ', undo: 'skip'
   editor.deleteToPreviousWordBoundary undo: 'skip' # TODO: how to skip this?
-
-
   curPoint = editor.getCursorBufferPosition()
   lineText = editor.lineTextForBufferRow(curPoint.row)
   lineLength = lineText.length
@@ -56,36 +54,31 @@ atom.commands.add 'atom-text-editor', 'custom:just-one-space', ->
   editor.insertText ' '
 
 atom.commands.add 'atom-text-editor', 'custom:kill-sexp', ->
-    editor = atom.views.getView(atom.workspace.getActiveTextEditor())
-    return unless editor
-    atom.commands.dispatch(editor, 'atomic-emacs:mark-sexp')
-    atom.commands.dispatch(editor, 'atomic-emacs:kill-region')
+  editor = atom.views.getView(atom.workspace.getActiveTextEditor())
+  return unless editor
+  atom.commands.dispatch(editor, 'atomic-emacs:mark-sexp')
+  atom.commands.dispatch(editor, 'atomic-emacs:kill-region')
 
 atom.commands.add 'body', 'custom:show-next-item', ->
-    editor = atom.workspace.getActiveTextEditor()
-    if editor
-      editor.element.focus()
-    atom.workspace.getActivePane().activateNextItem()
+  centerPane = atom.workspace.getCenter().getActivePane()
+  centerPane.focus()
+  centerPane.activateNextItem()
 
 atom.commands.add 'body', 'custom:show-previous-item', ->
-    editor = atom.workspace.getActiveTextEditor()
-    if editor
-      editor.element.focus()
-    atom.workspace.getActivePane().activatePreviousItem()
+  centerPane = atom.workspace.getCenter().getActivePane()
+  centerPane.focus()
+  centerPane.activatePreviousItem()
 
-  # row = curPoint.row
-  #
-  # left = curPoint.column
-  # right = curPoint.column
-  # while (left - 1 >= 0) {
-  #   char = editor.getTextInBufferRange([
-  #     [row, left - 1],
-  #     [row, left]
-  #   ])
-  #   if char.match(/[ \t]/) {
-  #     left -= 1
-  #   } else {
-  #     break
-  #   }
-  # }
-  # editor.setTextInBufferRange([[row, left], [row, right]], text, [options])
+defineShowItemAt = (number) ->
+  atom.commands.add 'body', 'custom:show-item-' + number, ->
+    centerPane = atom.workspace.getCenter().getActivePane()
+    centerPane.focus()
+    centerPane.activateItemAtIndex(number - 1)
+
+for number in [1..8]
+  defineShowItemAt(number)
+
+atom.commands.add 'body', 'custom:show-item-9', ->
+  centerPane = atom.workspace.getCenter().getActivePane()
+  centerPane.focus()
+  centerPane.activateLastItem()

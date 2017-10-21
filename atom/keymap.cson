@@ -52,12 +52,30 @@
   'alt-l': 'custom:lowercase-word'
   'alt-c': 'custom:capitalize-word'
   'alt-space': 'custom:just-one-space'
+  'cmd-1': 'custom:show-item-1'
+  'cmd-2': 'custom:show-item-2'
+  'cmd-3': 'custom:show-item-3'
+  'cmd-4': 'custom:show-item-4'
+  'cmd-5': 'custom:show-item-5'
+  'cmd-6': 'custom:show-item-6'
+  'cmd-7': 'custom:show-item-7'
+  'cmd-8': 'custom:show-item-8'
+  'cmd-9': 'custom:show-item-9'
 
 '.tree-view':
   'alt-b': 'tree-view:recursive-collapse-directory'
   'alt-right': 'tree-view:expand-item'
   'alt-f': 'tree-view:expand-item'
   'ctrl-r': 'tree-view:rename'
+  'cmd-1': 'unset!'
+  'cmd-2': 'unset!'
+  'cmd-3': 'unset!'
+  'cmd-4': 'unset!'
+  'cmd-5': 'unset!'
+  'cmd-6': 'unset!'
+  'cmd-7': 'unset!'
+  'cmd-8': 'unset!'
+  'cmd-9': 'unset!'
 
 'atom-workspace atom-text-editor:not([mini])':
   'alt-down': 'editor:add-selection-below'
@@ -67,6 +85,7 @@
   'enter': 'github:open-file'
   'shift-enter': 'github:show-diff-view'
   's': 'core:confirm'
+  'escape': 'github:toggle-git-tab-focus'
 
 '.platform-darwin atom-text-editor':
   'ctrl-s': 'find-and-replace:find-next'
