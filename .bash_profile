@@ -11,3 +11,7 @@ source ~/Development/config_files/square/bash_profile
 ###########################################
 
 export GOROOT=/usr/local/opt/go/libexec
+
+if [ -f ~/.bashrc ]; then
+  source ~/.bashrc
+fi

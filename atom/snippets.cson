@@ -13,19 +13,50 @@
 #     'prefix': 'log'
 #     'body': 'console.log $1'
 #
-# Each scope (e.g. '.source.coffee' above) can only be declared once.
-#
 # This file uses CoffeeScript Object Notation (CSON).
-# If you are unfamiliar with CSON, you can read more about it in the
-# Atom Flight Manual:
-# http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
+# If you are unfamiliar with CSON, you can read more about it here:
+# https://github.com/bevry/cson#what-is-cson
 '.text.html.basic':
+  'My Paragraph':
+    'prefix': 'p'
+    'body': '<p>$1</p>$2'
   'Line Break':
     'prefix': 'br'
     'body': '</br>$1'
 
 ############# HTML Mustache #############
 '.text.html.mustache':
+  'My Paragraph':
+    'prefix': 'p'
+    'body': '<p>$1</p>$2'
   'Line Break':
     'prefix': 'br'
     'body': '</br>$1'
+
+############# JSON #############
+'.source.json':
+  'Word Template':
+    'prefix': 'word'
+    'body': '''
+      {
+        "word": "$1",
+        "definition": "$2",
+        "origin": "$3",
+        "usage": "$4",
+        "page": $5,
+        "rank": $6
+      },$7
+      '''
+  'Book Template':
+    'prefix': 'book'
+    'body': '''
+      {
+        "title": "$1",
+        "author": "$2",
+        "pages": $3,
+        "year": "$4",
+        "dateRead": "$5",
+        "comment": "$6",
+        "vocabulary": [$7]
+      }
+      '''

@@ -38,8 +38,10 @@ stty werase undef
 export LSCOLORS='gxfxcxdxbxegedabagacad'
 export CLICOLOR='YES'
 export GREP_OPTIONS='--color=auto'
+export LESS='-z 10 -R'
 alias ll="ls -lah"
 alias ls="ls -F"
+stty -ixon -ixoff
 alias cddes="cd ~/Desktop"
 alias cdd="cd ~/Development"
 alias cddd="cd ~/Development/dashboard"
@@ -49,6 +51,8 @@ set -o ignoreeof
 alias cd..="cd .."
 stty -ixon # C-s in bash will now properly perform incremental search forward
 export PAGER="`which less`"
+export EDITOR="`which emacs`"
+export VISUAL="`which emacs`"
 
 ################################################################
 # History
@@ -70,7 +74,6 @@ alias hideHidden="echo use CMD-SHIFT-. in finder"
 ################################################################
 # Git
 alias prune="git checkout master; git remote prune origin; git branch | sed -Ee 's/^\*? *//g' -Ee '/^master$/d' | xargs git branch -D;"
-# alias prune="git remote prune origin; git branch | xargs git branch -D;"
 alias gitlog="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gitgraph="git log --graph --pretty=oneline --abbrev-commit;"
 alias gi='echo git |'

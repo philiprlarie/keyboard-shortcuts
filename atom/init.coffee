@@ -18,6 +18,14 @@ atom.commands.add 'atom-text-editor', 'custom:line-up-multi', ->
   editor = atom.workspace.getActiveTextEditor()
   editor.moveUp(5)
 
+atom.commands.add 'atom-text-editor', 'custom:select-down-multi', ->
+  editor = atom.workspace.getActiveTextEditor()
+  editor.selectDown(5)
+
+atom.commands.add 'atom-text-editor', 'custom:select-up-multi', ->
+  editor = atom.workspace.getActiveTextEditor()
+  editor.selectUp(5)
+
 atom.commands.add 'atom-text-editor', 'custom:uppercase-word', ->
   editor = atom.workspace.getActiveTextEditor()
   editor.upperCase()

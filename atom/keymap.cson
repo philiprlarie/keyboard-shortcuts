@@ -38,6 +38,8 @@
   'ctrl-cmd-n': 'editor:move-line-down'
   'alt-p': 'custom:line-up-multi'
   'alt-n': 'custom:line-down-multi'
+  'alt-shift-p': 'custom:select-up-multi'
+  'alt-shift-n': 'custom:select-down-multi'
   'ctrl-tab ^ctrl': 'unset!'
   'ctrl-tab': 'custom:show-next-item'
   'ctrl-shift-tab ^ctrl': 'unset!'
