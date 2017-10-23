@@ -3,5 +3,7 @@
 "\C-w": kill-region
 "\C-p": history-search-backward
 "\C-n": history-search-forward
+# runs `yank-last-arg` with argument 1. repeated presses will yank the first argument cycling through previous commands
+"\e\C-y": "\e1\e."
 
 set completion-ignore-case On
