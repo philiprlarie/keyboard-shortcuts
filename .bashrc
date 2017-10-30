@@ -38,7 +38,6 @@ stty werase undef
 export LSCOLORS='gxfxcxdxbxegedabagacad'
 export CLICOLOR='YES'
 export GREP_OPTIONS='--color=auto'
-export LESS='-z 10 -R'
 alias ll="ls -lah"
 alias ls="ls -F"
 stty -ixon -ixoff
