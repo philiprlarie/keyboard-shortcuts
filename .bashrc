@@ -1,7 +1,7 @@
 ########################################################
 # load Square specific bashrc
 ########################################################
-source ~/Development/config_files/square/bashrc
+[[ -f "$HOME/Development/config_files/square/bashrc" ]] && source ~/Development/config_files/square/bashrc
 ########################################################
 
 # uncomment to automatically `bundle exec` common ruby commands
@@ -11,7 +11,7 @@ source ~/Development/config_files/square/bashrc
 alias dashdoc="sq @dashboard stop && rm -rf tmp && sq @dashboard build"
 
 # load the aliases in config_files files (optional)
-source ~/Development/config_files/square/aliases
+[[ -f "$HOME/Development/config_files/square/aliases" ]] && source ~/Development/config_files/square/aliases
 
 [[ -f "$HOME/.aliases" ]] && source "$HOME/.aliases"
 [[ -f "$HOME/.localaliases" ]] && source "$HOME/.localaliases"
@@ -45,6 +45,7 @@ alias cddes="cd ~/Desktop"
 alias cdd="cd ~/Development"
 alias cddd="cd ~/Development/dashboard"
 alias cddj="cd ~/Development/java"
+alias cddw="cd ~/Development/web"
 cdf () { cd `dirname $1`; }
 set -o ignoreeof
 alias cd..="cd .."

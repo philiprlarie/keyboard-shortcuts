@@ -1,7 +1,7 @@
 ##############################################################
 # load Square specific bash_profile
 ##############################################################
-source ~/Development/config_files/square/bash_profile
+[[ -f "$HOME/Development/config_files/square/bash_profile" ]] && source ~/Development/config_files/square/bash_profile
 ##############################################################
 
 # vim: filetype=sh
@@ -12,6 +12,6 @@ source ~/Development/config_files/square/bash_profile
 
 export GOROOT=/usr/local/opt/go/libexec
 
-if [ -f ~/.bashrc ]; then
-  source ~/.bashrc
-fi
+# if [ -f ~/.bashrc ]; then
+#   source ~/.bashrc
+# fi
