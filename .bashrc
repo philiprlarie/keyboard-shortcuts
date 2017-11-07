@@ -8,7 +8,7 @@
 # if [[ -f "$SQUARE_HOME/config_files/square/bundler-exec.sh" ]]; then
 #   source $SQUARE_HOME/config_files/square/bundler-exec.sh
 # fi
-alias dashdoc="sq @dashboard stop && rm -rf tmp && sq @dashboard build"
+alias dashdoc="sq @dashboard stop && rm -rf tmp && sq @dashboard build; echo 'check out https://stash.corp.squareup.com/projects/SQ/repos/dashboard/browse/docs/troubleshooting.md for more troubleshooting ideas;"
 
 # load the aliases in config_files files (optional)
 [[ -f "$HOME/Development/config_files/square/aliases" ]] && source ~/Development/config_files/square/aliases
