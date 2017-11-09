@@ -24,9 +24,10 @@ alias dashdoc="sq @dashboard stop && rm -rf tmp && sq @dashboard build; echo 'ch
 # Command prompt
 purp=$(tput setaf 5)
 cyan=$(tput setaf 6)
+grey=$(tput setaf 7)
 bold=$(tput bold)
 reset=$(tput sgr0)
-export PS1='\[$reset\]\[$cyan\]\W\[$reset\]/ \[$purp\]\u\[$cyan\]$\[$reset\] '
+export PS1='\[$reset\]\[$grey\]\A \[$cyan\]\W\[$reset\]/ \[$purp\]\u\[$cyan\]$\[$reset\] '
 
 ################################################################
 # Path
