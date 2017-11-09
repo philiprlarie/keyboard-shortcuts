@@ -1,0 +1,3 @@
+Copy "U.S. fewer dead keys.icns" and "U.S. fewer dead keys.layout" into "~/Library/Keyboard\ Layouts"
+
+These files were generated using Ukelele for mac
