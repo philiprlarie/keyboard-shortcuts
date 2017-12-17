@@ -1,0 +1,35 @@
+"*":
+  "atomic-emacs":
+    killToClipboard: false
+  "autocomplete-plus":
+    confirmCompletion: "tab"
+  core:
+    audioBeep: false
+    closeDeletedFileTabs: true
+    closeEmptyWindows: false
+    openEmptyEditorOnStart: false
+    packagesWithKeymapsDisabled: [
+      "intentions"
+    ]
+    telemetryConsent: "limited"
+  editor:
+    fontSize: 18
+    showIndentGuide: true
+    showInvisibles: true
+    softWrap: true
+    tabType: "soft"
+  "ember-cli-helper":
+    generateFromBlueprint: false
+  "exception-reporting":
+    userId: .............
+  linter:
+    lintOnChange: false
+  "linter-eslint":
+    disableWhenNoEslintConfig: false
+  "linter-ui-default":
+    panelHeight: 113
+    showPanel: true
+  minimap:
+    plugins:
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
