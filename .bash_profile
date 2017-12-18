@@ -12,6 +12,6 @@
 
 export GOROOT=/usr/local/opt/go/libexec
 
-# if [ -f ~/.bashrc ]; then
-#   source ~/.bashrc
-# fi
+if [ -f ~/.bashrc ]; then
+  source ~/.bashrc
+fi

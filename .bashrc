@@ -8,7 +8,7 @@
 # if [[ -f "$SQUARE_HOME/config_files/square/bundler-exec.sh" ]]; then
 #   source $SQUARE_HOME/config_files/square/bundler-exec.sh
 # fi
-alias dashdoc="ehco 'cd ~/Development/dashboard/frontend/dashboard'; cd ~/Development/dashboard/frontend/dashboard; echo 'yarn hard-reset'; yarn hard-reset; echo 'yarn hard-reset-reals'; yarn hard-reset-rails; echo 'check out https://stash.corp.squareup.com/projects/SQ/repos/dashboard/browse/docs/troubleshooting.md for more troubleshooting ideas';"
+alias dashdoc="echo 'cd ~/Development/dashboard/frontend/dashboard'; cd ~/Development/dashboard/frontend/dashboard; echo 'yarn hard-reset'; yarn hard-reset; echo 'yarn hard-reset-reals'; yarn hard-reset-rails; echo 'check out https://stash.corp.squareup.com/projects/SQ/repos/dashboard/browse/docs/troubleshooting.md for more troubleshooting ideas';"
 
 # load the aliases in config_files files (optional)
 [[ -f "$HOME/Development/config_files/square/aliases" ]] && source ~/Development/config_files/square/aliases
