@@ -1,0 +1,9 @@
+{
+  "extends": "./base.js",
+  "env": {
+    "commonjs": true
+  },
+  "rules": {
+    "valid-jsdoc": ["error", { "requireParamDescription": false, "requireReturnDescription": false, "requireReturn": false, "prefer": { "return": "returns" } }]
+  }
+}

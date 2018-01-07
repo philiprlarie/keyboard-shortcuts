@@ -1,0 +1,3 @@
+{
+  "extends": "./linting/.eslintrc-es6.js",
+}

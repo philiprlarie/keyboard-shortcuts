@@ -10,10 +10,10 @@
     openEmptyEditorOnStart: false
     packagesWithKeymapsDisabled: [
       "intentions"
+      "prettier-atom"
     ]
     telemetryConsent: "limited"
   editor:
-    fontSize: 18
     showIndentGuide: true
     showInvisibles: true
     softWrap: true
@@ -30,6 +30,7 @@
     lintOnChange: false
   "linter-eslint":
     disableWhenNoEslintConfig: false
+    eslintrcPath: "~/.atom/.eslintrc"
   "linter-ui-default":
     panelHeight: 113
     showPanel: true
@@ -53,6 +54,11 @@
   "minimap-selection":
     outlineSelection: true
   pigments: {}
+  "prettier-atom":
+    prettierOptions:
+      printWidth: 120
+      singleQuote: true
+    useEslint: true
   "split-diff":
     turnOffSoftWrap: true
   welcome:

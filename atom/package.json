@@ -1,0 +1,22 @@
+{
+  "name": "linting",
+  "version": "1.0.0",
+  "description": "holds bulk of files only for default linting configuration. The linting binary lives in .atom/packages and these node modules need to be in a parent directory of it.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-eslint": "^7.2.3",
+    "eslint": "^3.19.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-config-prettier": "^2.6.0",
+    "eslint-plugin-prettier": "^2.3.1",
+    "prettier": "^1.7.2"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0"
+  }
+}
