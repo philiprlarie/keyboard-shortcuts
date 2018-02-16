@@ -83,6 +83,7 @@
   'alt-down': 'editor:add-selection-below'
   'alt-up': 'editor:add-selection-above'
   'ctrl-shift-c': 'editor:copy-project-path'
+  'ctrl-alt-c': 'editor:copy-project-path'
 
 '.github-FilePatchView, .github-StagingView':
   'enter': 'github:open-file'

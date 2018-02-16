@@ -13,6 +13,7 @@ module.exports = {
     'func-style': ['error', 'declaration'],
     'new-parens': 'error',
     'no-console': 'warn',
+    'no-debugger': 'warn',
     'no-eval': 'error',
     'no-extend-native': 'error',
     'no-implicit-coercion': 'error',
