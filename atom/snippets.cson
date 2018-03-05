@@ -60,3 +60,13 @@
         "vocabulary": [$7]
       }
       '''
+
+############# JavaScript #############
+'.source.js':
+  'for (custom)':
+    'prefix': 'for'
+    'body': """
+      for (let ${1:i} = 0; ${1:i} < ${2:array}.length; ${1:i}++) {
+        ${2:array}[${1:i}]$3
+      }
+    """

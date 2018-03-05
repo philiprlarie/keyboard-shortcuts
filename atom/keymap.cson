@@ -82,8 +82,8 @@
 'atom-workspace atom-text-editor:not([mini])':
   'alt-down': 'editor:add-selection-below'
   'alt-up': 'editor:add-selection-above'
-  'ctrl-shift-c': 'editor:copy-project-path'
-  'ctrl-alt-c': 'editor:copy-project-path'
+  'ctrl-shift-c': 'copy-path:copy-basename'
+  'ctrl-alt-c': 'copy-path:copy-project-relative-path'
 
 '.github-FilePatchView, .github-StagingView':
   'enter': 'github:open-file'
