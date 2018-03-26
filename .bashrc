@@ -45,7 +45,7 @@ alias ls="ls -F"
 stty -ixon -ixoff
 alias cddes="cd ~/Desktop"
 alias cdd="cd ~/Development"
-alias cddd="cd ~/Development/dashboard/frontend/dashboard"
+alias cddd="cd ~/Development/dashboard/frontend/dashboard; . env/bin/activate"
 alias cddj="cd ~/Development/java"
 alias cddw="cd ~/Development/web"
 cdf () { cd `dirname $1`; }
