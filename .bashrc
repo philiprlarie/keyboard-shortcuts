@@ -55,6 +55,7 @@ stty -ixon # C-s in bash will now properly perform incremental search forward
 export PAGER="`which less`"
 export EDITOR="`which emacs`"
 export VISUAL="`which emacs`"
+alias wpc='sqssh web sjc2b '\''echo Web Production Console; cd current; ~/current/bin/bundle exec rails console'\'''
 
 ################################################################
 # History
