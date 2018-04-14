@@ -1,7 +1,11 @@
 "\eh": backward-kill-word
 "\ew": copy-region-as-kill
 "\C-w": kill-region
+## arrow up
+"\e[A":history-search-backward
 "\C-p": history-search-backward
+## arrow down
+"\e[B":history-search-forward
 "\C-n": history-search-forward
 # runs `yank-last-arg` with argument 1. repeated presses will yank the first argument cycling through previous commands
 "\e\C-y": "\e1\e."
