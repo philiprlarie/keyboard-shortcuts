@@ -17,7 +17,7 @@
   "~$<" = ("setMark:", "moveToBeginningOfDocument:");
   "~$>" = ("setMark:", "moveToEndOfDocument:");
 
-  "~$f" = "moveWordForwardAndModifySelection:";
+  "~$F" = "moveWordForwardAndModifySelection:";
   "~$B" = "moveWordBackwardAndModifySelection:";
   "@d" = "selectWord:";
   "^$V" = "pageDownAndModifySelection:";

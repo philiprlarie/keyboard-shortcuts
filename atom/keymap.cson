@@ -84,6 +84,13 @@
   'alt-up': 'editor:add-selection-above'
   'ctrl-shift-c': 'copy-path:copy-basename'
   'ctrl-alt-c': 'copy-path:copy-project-relative-path'
+  'ctrl-alt-cmd-left': 'git-blame:toggle'
+  'ctrl-alt-cmd-i': 'linter-eslint:fix-file'
+
+'atom-workspace atom-text-editor':
+  'alt-delete': 'editor:delete-to-end-of-word'
+  'ctrl-alt-left': 'atomic-emacs:backward-sexp'
+  'ctrl-alt-right': 'atomic-emacs:forward-sexp'
 
 '.github-FilePatchView, .github-StagingView':
   'enter': 'github:open-file'

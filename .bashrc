@@ -9,6 +9,7 @@
 #   source $SQUARE_HOME/config_files/square/bundler-exec.sh
 # fi
 alias dashdoc="echo 'cd ~/Development/dashboard/frontend/dashboard'; cd ~/Development/dashboard/frontend/dashboard; echo 'watchman watch-del-all'; watchman watch-del-all; echo 'watchman shutdown-server'; watchman shutdown-server; echo 'yarn hard-reset'; yarn hard-reset; echo 'yarn hard-reset-reals'; yarn hard-reset-rails; echo 'check out https://stash.corp.squareup.com/projects/SQ/repos/dashboard/browse/docs/troubleshooting.md for more troubleshooting ideas';"
+alias emberserve="echo -e '$bold$ yarn install $reset' && yarn install && echo -e '$bold$ yarn fix-watchman$reset' && yarn fix-watchman && echo -e '$bold$ ember serve$reset' && ember serve;"
 
 # load the aliases in config_files files (optional)
 [[ -f "$HOME/Development/config_files/square/aliases" ]] && source ~/Development/config_files/square/aliases
