@@ -54,6 +54,7 @@
   'alt-l': 'custom:lowercase-word'
   'alt-c': 'custom:capitalize-word'
   'alt-space': 'custom:just-one-space'
+  'ctrl-shift-a': 'editor:select-to-beginning-of-line'
   'cmd-1': 'custom:show-item-1'
   'cmd-2': 'custom:show-item-2'
   'cmd-3': 'custom:show-item-3'
@@ -84,6 +85,7 @@
   'alt-up': 'editor:add-selection-above'
   'ctrl-shift-c': 'copy-path:copy-basename'
   'ctrl-alt-c': 'copy-path:copy-project-relative-path'
+  'ctrl-shift-a': 'editor:select-to-beginning-of-line'
   'ctrl-alt-cmd-left': 'git-blame:toggle'
   'ctrl-alt-cmd-i': 'linter-eslint:fix-file'
 
@@ -103,3 +105,4 @@
   'ctrl-r': 'find-and-replace:find-previous'
   'ctrl-alt-k': 'custom:kill-sexp'
   'cmd-;': 'spell-check:correct-misspelling'
+  'alt-delete': 'atomic-emacs:kill-word'

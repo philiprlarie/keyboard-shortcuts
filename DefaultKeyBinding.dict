@@ -50,7 +50,7 @@
     "moveBackward:", "moveToBeginningOfParagraph:");
 }
 
-// Place these in .bashrc. 
+// Place these in .bashrc.
 // $ defaults write NSGlobalDomain KeyRepeat -int 4 # key repeat speed
 // $ defaults write NSGlobalDomain InitialKeyRepeat -int 15 # time until key repeat starts
 // $ defaults write -g NSTextKillRingSize -string 4 # sets kill ring size to 4 items

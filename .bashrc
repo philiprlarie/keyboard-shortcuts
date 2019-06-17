@@ -33,8 +33,8 @@ export PS1='\[$reset\]\[$grey\]\A \[$cyan\]\W\[$reset\]/ \[$purp\]\u\[$cyan\]$\[
 
 ################################################################
 # Path
-export PATH="$PATH:/usr/local/mysql/bin"
-
+export PATH="$PATH:/usr/local/mysql/bin:/Library/PostgreSQL/9.6/bin"
+export PATH="$PATH:$HOME/bin"
 ################################################################
 # Bash setting
 stty werase undef
@@ -49,14 +49,16 @@ alias cdd="cd ~/Development"
 alias cddd="cd ~/Development/dashboard/frontend/dashboard; . env/bin/activate"
 alias cddj="cd ~/Development/java"
 alias cddw="cd ~/Development/web"
+alias cd2019="cd ~/Documents/2019"
 cdf () { cd `dirname $1`; }
-set -o ignoreeof
+set -o ignoreeof # this way ^d won't kill the terminal session
 alias cd..="cd .."
 stty -ixon # C-s in bash will now properly perform incremental search forward
 export PAGER="`which less`"
 export EDITOR="`which emacs`"
 export VISUAL="`which emacs`"
 alias wpc='sqssh web sjc2b '\''echo Web Production Console; cd current; ~/current/bin/bundle exec rails console'\'''
+export PGPASSWORD=''
 
 ################################################################
 # History
@@ -96,3 +98,6 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
