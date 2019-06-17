@@ -32,8 +32,6 @@
 # http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
 
 'body':
-  'cmd-k right': 'pane:split-right-and-move-active-item'
-  'cmd-k left': 'pane:split-left-and-move-active-item'
   'ctrl-cmd-p': 'editor:move-line-up'
   'ctrl-cmd-n': 'editor:move-line-down'
   'alt-p': 'custom:line-up-multi'
@@ -64,6 +62,12 @@
   'cmd-7': 'custom:show-item-7'
   'cmd-8': 'custom:show-item-8'
   'cmd-9': 'custom:show-item-9'
+  'ctrl-)': 'tree-view:toggle'
+  'alt-m 1': 'unset!'
+  'alt-m 2': 'unset!'
+  'alt-m 3': 'unset!'
+  'alt-m enter': 'unset!'
+  'alt-m r': 'unset!'
 
 '.tree-view':
   'alt-b': 'tree-view:recursive-collapse-directory'
@@ -81,6 +85,11 @@
   'cmd-9': 'unset!'
 
 'atom-workspace atom-text-editor:not([mini])':
+  'ctrl-x 3': 'pane:split-right-and-move-active-item'
+  'ctrl-x 1': 'atomic-emacs:close-other-panes'
+  'cmd-k alt-right': 'window:move-active-item-to-pane-on-right'
+  'cmd-k alt-left': 'window:move-active-item-to-pane-on-left'
+  'ctrl-alt-tab': 'window:focus-next-pane'
   'alt-down': 'editor:add-selection-below'
   'alt-up': 'editor:add-selection-above'
   'ctrl-shift-c': 'copy-path:copy-basename'
@@ -95,7 +104,7 @@
   'ctrl-alt-right': 'atomic-emacs:forward-sexp'
 
 '.github-FilePatchView, .github-StagingView':
-  'enter': 'github:open-file'
+  'enter': 'github:jump-to-file'
   'shift-enter': 'github:show-diff-view'
   's': 'core:confirm'
   'escape': 'github:toggle-git-tab-focus'
@@ -106,3 +115,7 @@
   'ctrl-alt-k': 'custom:kill-sexp'
   'cmd-;': 'spell-check:correct-misspelling'
   'alt-delete': 'atomic-emacs:kill-word'
+  'cmd-alt-f': 'project-find:show-in-current-directory'
+
+'atom-text-editor:not(.autocomplete-active):not(.mini)':
+  'up': 'unset!'

@@ -13,6 +13,8 @@
   "~b" = "moveWordBackward:";
   "~p" = ("moveUp:", "moveUp:", "moveUp:", "moveUp:", "moveUp:");
   "~n" = ("moveDown:", "moveDown:", "moveDown:", "moveDown:", "moveDown:");
+  "~P" = ("moveUpAndModifySelection:", "moveUpAndModifySelection:", "moveUpAndModifySelection:", "moveUpAndModifySelection:", "moveUpAndModifySelection:");
+  "~N" = ("moveDownAndModifySelection:", "moveDownAndModifySelection:", "moveDownAndModifySelection:", "moveDownAndModifySelection:", "moveDownAndModifySelection:");
   "~v" = "pageUp:";
   "~$<" = ("setMark:", "moveToBeginningOfDocument:");
   "~$>" = ("setMark:", "moveToEndOfDocument:");
@@ -34,6 +36,8 @@
   "^x" = {
     "^x" = "swapWithMark:";
   };
+
+  "~t" = "transposeWords:"; // doesn't work in most applications
 
   "~c" = ("capitalizeWord:", "moveForward:", "moveForward:");
   "~l" = ("lowercaseWord:", "moveForward:", "moveForward:");

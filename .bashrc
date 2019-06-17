@@ -8,8 +8,6 @@
 # if [[ -f "$SQUARE_HOME/config_files/square/bundler-exec.sh" ]]; then
 #   source $SQUARE_HOME/config_files/square/bundler-exec.sh
 # fi
-alias dashdoc="echo 'cd ~/Development/dashboard/frontend/dashboard'; cd ~/Development/dashboard/frontend/dashboard; echo 'watchman watch-del-all'; watchman watch-del-all; echo 'watchman shutdown-server'; watchman shutdown-server; echo 'yarn hard-reset'; yarn hard-reset; echo 'yarn hard-reset-reals'; yarn hard-reset-rails; echo 'check out https://stash.corp.squareup.com/projects/SQ/repos/dashboard/browse/docs/troubleshooting.md for more troubleshooting ideas';"
-alias emberserve="echo -e '$bold$ yarn install $reset' && yarn install && echo -e '$bold$ yarn fix-watchman$reset' && yarn fix-watchman && echo -e '$bold$ ember serve$reset' && ember serve;"
 
 # load the aliases in config_files files (optional)
 [[ -f "$HOME/Development/config_files/square/aliases" ]] && source ~/Development/config_files/square/aliases
@@ -20,15 +18,20 @@ alias emberserve="echo -e '$bold$ yarn install $reset' && yarn install && echo -
 ###########################################
 # Feel free to make your own changes below.
 ###########################################
-
-################################################################
-# Command prompt
 purp=$(tput setaf 5)
 cyan=$(tput setaf 6)
 grey=$(tput setaf 7)
 turquoise=$(tput setaf 29)
 bold=$(tput bold)
 reset=$(tput sgr0)
+
+################################################################
+# Square specific commands
+alias dashdoc="echo '${bold}cd ~/Development/dashboard/frontend/dashboard${reset}'; cd ~/Development/dashboard/frontend/dashboard; echo '${bold}watchman watch-del-all${reset}'; watchman watch-del-all; echo '${bold}watchman shutdown-server${reset}'; watchman shutdown-server; echo '${bold}yarn hard-reset${reset}'; yarn hard-reset; echo '${bold}check out https://stash.corp.squareup.com/projects/SQ/repos/dashboard/browse/docs/troubleshooting.md for more troubleshooting ideas${reset}';"
+alias emberserve="echo -e '$bold$ yarn install $reset' && yarn install && echo -e '$bold$ yarn fix-watchman$reset' && yarn fix-watchman && echo -e '$bold$ ember serve$reset' && ember serve;"
+
+################################################################
+# Command prompt
 export PS1='\[$reset\]\[$grey\]\A \[$cyan\]\W\[$reset\]/ \[$purp\]\u\[$cyan\]$\[$reset\] '
 
 ################################################################
@@ -82,8 +85,10 @@ alias hideHidden="echo use CMD-SHIFT-. in finder"
 alias prune="git checkout master; git remote prune origin; git branch | sed -Ee 's/^\*? *//g' -Ee '/^master$/d' | xargs git branch -D;"
 alias gitlog="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gitgraph="git log --graph --pretty=oneline --abbrev-commit;"
-alias gi='echo git |'
-alias tpull='xargs -t -I {} bash -c "{} pull"'
+gi () {
+  echo ${bold}git "${1:1}" "${@:2}"${reset}
+  git "${1:1}" "${@:2}"
+}
 if [ -f ~/.git-completion.bash ]; then # git autocompletion https://git-scm.com/book/en/v1/Git-Basics-Tips-and-Tricks
 . ~/.git-completion.bash
 fi
