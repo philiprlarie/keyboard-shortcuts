@@ -18,7 +18,7 @@
 #   'ctrl-p': 'core:move-down'
 #
 # You can find more information about keymaps in these guides:
-# * http://flight-manual.atom.io/using-atom/sections/basic-customization/#_customizing_keybindings
+# * http://flight-manual.atom.io/using-atom/sections/basic-customization/#customizing-keybindings
 # * http://flight-manual.atom.io/behind-atom/sections/keymaps-in-depth/
 #
 # If you're having trouble with your keybindings not working, try the
@@ -29,7 +29,7 @@
 # This file uses CoffeeScript Object Notation (CSON).
 # If you are unfamiliar with CSON, you can read more about it in the
 # Atom Flight Manual:
-# http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
+# http://flight-manual.atom.io/using-atom/sections/basic-customization/#configuring-with-cson
 
 'body':
   'ctrl-cmd-p': 'editor:move-line-up'
@@ -116,6 +116,11 @@
   'cmd-;': 'spell-check:correct-misspelling'
   'alt-delete': 'atomic-emacs:kill-word'
   'cmd-alt-f': 'project-find:show-in-current-directory'
+  'cmd-b': 'editor:wrap-with-strong'
+  'cmd-shift-c': 'editor:wrap-with-cloze'
+  'ctrl-alt-3': 'editor:multi-cursor-tonum',
+  'ctrl-alt-=': 'editor:multi-cursor-increment',
+  'ctrl-alt--': 'editor:multi-cursor-decrement'
 
 'atom-text-editor:not(.autocomplete-active):not(.mini)':
   'up': 'unset!'

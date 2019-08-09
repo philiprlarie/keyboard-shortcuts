@@ -90,3 +90,66 @@ atom.commands.add 'body', 'custom:show-item-9', ->
   centerPane = atom.workspace.getCenter().getActivePane()
   centerPane.focus()
   centerPane.activateLastItem()
+
+atom.commands.add 'atom-text-editor',
+  'editor:wrap-with-strong': ->
+    editor = atom.workspace.getActiveTextEditor()
+    checkPt = editor.createCheckpoint()
+    for selection in editor.getSelections()
+      textToWrap = selection.getText()
+      selection.insertText("<strong>#{textToWrap}</strong>")
+    editor.groupChangesSinceCheckpoint(checkPt)
+
+atom.commands.add 'atom-text-editor',
+  'editor:wrap-with-cloze': ->
+    editor = atom.workspace.getActiveTextEditor()
+    checkPt = editor.createCheckpoint()
+    for selection in editor.getSelections()
+      textToWrap = selection.getText()
+      cursor = selection.cursor
+      rangeOfInsertedText = selection.insertText("{{c::#{textToWrap}}}")
+      newCursorPosition = rangeOfInsertedText.start.copy()
+      newCursorPosition.column += 3
+      cursor.setBufferPosition(newCursorPosition)
+    editor.groupChangesSinceCheckpoint(checkPt)
+
+convertSelectionToIndexNumber = (selection, idx) ->
+  selection.insertText (idx + 1).toString(), select: true
+  return
+
+atom.commands.add 'atom-text-editor',
+  'editor:multi-cursor-tonum': ->
+    editor = atom.workspace.getActiveTextEditor()
+    checkPt = editor.createCheckpoint()
+    editor.getSelections().forEach(convertSelectionToIndexNumber)
+    editor.groupChangesSinceCheckpoint(checkPt)
+
+incrementSelection = (selection, idx) ->
+  foundText = selection.getText()
+  foundNum = +foundText
+  if foundNum.toString() == foundText and foundText != 'NaN'
+    newText = (foundNum + 1).toString()
+    selection.insertText newText, select: true
+  return
+
+atom.commands.add 'atom-text-editor',
+  'editor:multi-cursor-increment': ->
+    editor = atom.workspace.getActiveTextEditor()
+    checkPt = editor.createCheckpoint()
+    editor.getSelections().forEach(incrementSelection)
+    editor.groupChangesSinceCheckpoint(checkPt)
+
+decrementSelection = (selection, idx) ->
+  foundText = selection.getText()
+  foundNum = +foundText
+  if foundNum.toString() == foundText and foundText != 'NaN'
+    newText = (foundNum - 1).toString()
+    selection.insertText newText, select: true
+  return
+
+atom.commands.add 'atom-text-editor',
+  'editor:multi-cursor-decrement': ->
+    editor = atom.workspace.getActiveTextEditor()
+    checkPt = editor.createCheckpoint()
+    editor.getSelections().forEach(decrementSelection)
+    editor.groupChangesSinceCheckpoint(checkPt)
